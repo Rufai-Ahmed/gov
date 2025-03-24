@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo and Address Section */}
           <div className="space-y-6">
-            <div className="flex">
+            <div className="flex justify-start">
               <Logo />
             </div>
 
