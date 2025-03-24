@@ -1,6 +1,5 @@
 "use client";
 import { useTheme } from "next-themes";
-
 import Image from "next/image";
 
 const AboutWepay = () => {
@@ -49,17 +48,28 @@ const AboutWepay = () => {
           )}
         </div>
 
-        <div className="relative flex justify-center">
-          {/* <div className="absolute w-[350px] h-[350px] rounded-full border-2 border-green-400 dark:border-green-600 opacity-50"></div>
-          <div className="absolute w-[450px] h-[450px] rounded-full border-2 border-green-400 dark:border-green-600 opacity-30"></div> */}
+        <div className="relative flex justify-center items-center h-[500px]">
+          {/* Circles & POS Container */}
+          <div className="relative w-[450px] h-[450px] flex justify-center items-center">
+            {/* Circles */}
+            <Image
+              src="/images/circle.svg"
+              alt="Decorative circles"
+              width={400}
+              height={400}
+              className="absolute object-contain"
+            />
 
-          <Image
-            src="/images/image.png"
-            width={500}
-            height={500}
-            alt="Description"
-            quality={100}
-          />
+            {/* POS Device */}
+            <Image
+              src="/images/image.png"
+              width={500}
+              height={500}
+              alt="WePay POS Terminal"
+              quality={100}
+              className="relative z-10 object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
