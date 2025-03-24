@@ -27,7 +27,7 @@ const Better = () => {
   const card3Content = isDarkMode
     ?    <span>
     <span className="text-brand">
-    To make money hard, but to commot am no suppose
+    To make money hard, but to commot am no suppose hard.
     </span>{" "}
     WePay offers transparent, low-cost transaction fees, making
     banking accessible and affordable for everyone.
