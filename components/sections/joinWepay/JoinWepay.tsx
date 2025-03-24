@@ -41,7 +41,7 @@ const JoinWepay = () => {
         Join The WePay Revolution Today!
       </h1>
 
-      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="w-full max-w-7xl grid items-center grid-cols-1 xl:grid-cols-2 gap-8">
         {currentTestimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.id} testimonial={testimonial} />
         ))}

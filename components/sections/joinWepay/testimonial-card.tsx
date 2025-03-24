@@ -13,26 +13,26 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
       className="relative w-full max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto"
       style={{ background: "#e6fff0" }}
     >
-      <div className="relative p-4 sm:p-6 md:p-8">
-        <div className="absolute inset-0 w-full h-full">
+      <div className="relative flex items-center justify-center p-4 sm:p-6 md:p-8">
+        <div className="absolute inset-0 size-full">
           <Image
             src="/images/border.svg"
             alt="Decorative border"
             fill
-            className="object-contain"
+            className="object-cie"
             priority
           />
         </div>
 
-        <div className="relative bg-[#0a4331] text-white p-4 sm:p-6 md:p-8 rounded-lg h-full flex flex-col m-2 sm:m-3 md:m-4">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">
+        <div className="relative bg-[#0a4331] text-white p-4 sm:p-6 md:p-8 rounded-lg h-full w-full flex flex-col m-2 sm:m-3 md:m-4">
+          <h2 className="text-md sm:text-2xl font-semibold mb-2 sm:mb-4">
             Real Stories, Real Impact
           </h2>
-          <p className="text-gray-100 mb-4 sm:mb-6 md:mb-8 flex-grow text-sm sm:text-base">
+          <p className="text-gray-100 mb-4 sm:mb-6 md:mb-8 flex-grow text-xs sm:text-base">
             {testimonial.content}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto gap-4">
+          <div className="flex items-start sm:items-center justify-between mt-auto gap-4">
             <div>
               <h3 className="font-semibold text-lg sm:text-xl">
                 {testimonial.name}
