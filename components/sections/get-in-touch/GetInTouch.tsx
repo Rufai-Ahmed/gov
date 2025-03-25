@@ -11,21 +11,23 @@ const GetInTouch = () => {
   return (
     <div className="min-h-screen bg-[#e6fff5] dark:bg-[#043024] py-16 mt-20 px-4">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#1a5741] dark:text-white mb-6">
-          {isDarkMode ? "Make We Link Up!" : "Get In Touch with Us"}
-        </h1>
+        <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#1a5741] dark:text-white mb-4 sm:mb-6">
+            {isDarkMode ? "Make We Link Up!" : "Get In Touch with Us"}
+          </h1>
 
-        <div className="text-gray-700 dark:text-[#749797] text-center text-sm mb-12 max-w-2xl mx-auto">
-          <p className="mb-1">
-            {isDarkMode
-              ? "You wan know more about how WePay fit help your business or personal money"
-              : "Want to learn more about how WePay can support your business or personal financial"}
-          </p>
-          <p>
-            {isDarkMode
-              ? "needs? Drop your details below, and we go arrange call-back from our team."
-              : "needs? Share your details below, and we'll arrange a call-back from our team."}
-          </p>
+          <div className="text-gray-700 dark:text-[#749797] text-center text-sm sm:text-base mb-8 sm:mb-12 max-w-md sm:max-w-lg md:max-w-2xl mx-auto">
+            <p className="mb-1 sm:mb-2">
+              {isDarkMode
+                ? "You wan know more about how WePay fit help your business or personal money"
+                : "Want to learn more about how WePay can support your business or personal financial"}
+            </p>
+            <p>
+              {isDarkMode
+                ? "needs? Drop your details below, and we go arrange call-back from our team."
+                : "needs? Share your details below, and we'll arrange a call-back from our team."}
+            </p>
+          </div>
         </div>
 
         <form className="space-y-8">
