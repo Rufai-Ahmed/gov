@@ -7,7 +7,7 @@ const AboutWepay = () => {
   const isDarkMode = theme === "dark";
 
   return (
-    <div className="min-h-screen bg-[#e6fff5] dark:bg-[#043024] flex items-center justify-center mt-20 p-6">
+    <div className="min-h-screen bg-[#e6fff5] dark:bg-[#043024] flex items-center justify-center mt-3 p-6">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-5xl font-bold text-[#1a5741] dark:text-white">
