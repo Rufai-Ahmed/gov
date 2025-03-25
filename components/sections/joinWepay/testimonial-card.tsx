@@ -1,13 +1,18 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import type React from "react";
 import type { Testimonial } from "./testimonial";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
+  const { theme } = useTheme();
+  const isDarkMode = theme === "dark";
+
   return (
     <div className="relative w-full h-full bg-[#e6fff0] dark:bg-[#043024]">
       <div className="relative flex items-center justify-center p-4 sm:px-8 sm:p-6 md:p-8">
@@ -26,7 +31,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
             Real Stories, Real Impact
           </h2>
           <p className="text-gray-100 mb-4 sm:mb-6 md:mb-8 flex-grow text-xs sm:text-base line-clamp-1 md:line-clamp-6">
-            {testimonial.content}
+            {!isDarkMode ? testimonial.content : testimonial.contentPidgin}
           </p>
 
           <div className="flex items-start sm:items-center justify-between mt-auto gap-4">
