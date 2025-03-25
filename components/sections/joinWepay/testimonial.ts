@@ -3,6 +3,7 @@ export interface Testimonial {
     name: string
     title: string
     content: string
+    contentPidgin: string
     avatar: string
   }
   
