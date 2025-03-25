@@ -10,7 +10,6 @@ export function Logo({ onClick }: LogoProps) {
   return (
     <Link href="/" className="flex items-center " onClick={onClick}>
       <svg
-        width="160"
         height="59"
         viewBox="0 0 160 59"
         fill="none"
