@@ -15,7 +15,7 @@ const GetInTouch = () => {
           {isDarkMode ? "Make We Link Up!" : "Get In Touch with Us"}
         </h1>
 
-        <div className="text-gray-700 dark:text-gray-200 text-center text-sm mb-12 max-w-2xl mx-auto">
+        <div className="text-gray-700 dark:text-[#749797] text-center text-sm mb-12 max-w-2xl mx-auto">
           <p className="mb-1">
             {isDarkMode
               ? "You wan know more about how WePay fit help your business or personal money"
