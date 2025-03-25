@@ -15,11 +15,18 @@ const GetInTouch = () => {
           {isDarkMode ? "Make We Link Up!" : "Get In Touch with Us"}
         </h1>
 
-        <p className="text-gray-700 dark:text-gray-200 text-center text-sm mb-12 max-w-2xl mx-auto">
-          {isDarkMode
-            ? "You wan know more about how WePay fit help your business or personal money needs? Drop your details below, and we go arrange call-back from our team."
-            : "Want to learn more about how WePay can support your business or personal financial needs? Share your details below, and we'll arrange a call-back from our team."}
-        </p>
+        <div className="text-gray-700 dark:text-gray-200 text-center text-sm mb-12 max-w-2xl mx-auto">
+          <p className="mb-1">
+            {isDarkMode
+              ? "You wan know more about how WePay fit help your business or personal money"
+              : "Want to learn more about how WePay can support your business or personal financial"}
+          </p>
+          <p>
+            {isDarkMode
+              ? "needs? Drop your details below, and we go arrange call-back from our team."
+              : "needs? Share your details below, and we'll arrange a call-back from our team."}
+          </p>
+        </div>
 
         <form className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
