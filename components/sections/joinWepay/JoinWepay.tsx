@@ -34,8 +34,8 @@ const JoinWepay = () => {
   }, [api]);
 
   return (
-    <div className="min-h-screen bg-[#e6fff5] dark:bg-[#043024] flex flex-col items-center mt-20 justify-center p-6">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#1a5741] dark:text-white">
+    <div className="min-h-screen bg-[#e6fff5] dark:bg-[#043024] flex flex-col items-center py-12 md:py-20 px-4 sm:px-6 md:px-8">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-[#1a5741] dark:text-white leading-tight">
         Join The WePay Revolution Today!
       </h1>
 
@@ -62,14 +62,14 @@ const JoinWepay = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex items-center justify-center mt-8 gap-2">
-            <CarouselPrevious className="relative static transform-none bg-green-100 hover:bg-green-200 dark:bg-green-900 dark:hover:bg-green-800 text-[#1a5741] dark:text-white border-none" />
+          <div className="flex items-center justify-center mt-6 md:mt-8 gap-2">
+            <CarouselPrevious className="relative static transform-none bg-green-100 hover:bg-green-200 dark:bg-green-900 dark:hover:bg-green-800 text-[#1a5741] dark:text-white border-none h-8 w-8 sm:h-10 sm:w-10" />
             <div className="flex items-center justify-center space-x-2">
               {Array.from({ length: count }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => api?.scrollTo(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
                     current === index
                       ? "bg-[#1a5741] dark:bg-green-400"
                       : "bg-green-200 dark:bg-green-800"
@@ -78,7 +78,7 @@ const JoinWepay = () => {
                 />
               ))}
             </div>
-            <CarouselNext className="relative static transform-none bg-green-100 hover:bg-green-200 dark:bg-green-900 dark:hover:bg-green-800 text-[#1a5741] dark:text-white border-none" />
+            <CarouselNext className="relative static transform-none bg-green-100 hover:bg-green-200 dark:bg-green-900 dark:hover:bg-green-800 text-[#1a5741] dark:text-white border-none h-8 w-8 sm:h-10 sm:w-10" />
           </div>
         </Carousel>
       </div>

@@ -25,7 +25,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
           <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">
             Real Stories, Real Impact
           </h2>
-          <p className="text-gray-100 mb-4 sm:mb-6 md:mb-8 flex-grow text-xs sm:text-base line-clamp-1 md:line-clamp-6">
+          {/* Removed line-clamp classes to show full text */}
+          <p className="text-gray-100 mb-4 sm:mb-6 md:mb-8 flex-grow text-xs sm:text-sm md:text-base">
             {testimonial.content}
           </p>
 
