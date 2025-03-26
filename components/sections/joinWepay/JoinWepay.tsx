@@ -48,7 +48,7 @@ const JoinWepay = () => {
             loop: true,
           }}
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-2 md:-ml-4 items-center">
             {testimonials.map((testimonial) => (
               <CarouselItem
                 key={testimonial.id}

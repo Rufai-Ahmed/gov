@@ -10,7 +10,7 @@ interface TestimonialCardProps {
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   return (
     <div className="relative w-full h-full bg-[#e6fff0] dark:bg-[#043024]">
-      <div className="relative flex items-center justify-center p-4 sm:px-8 sm:p-6 md:p-8">
+      <div className="relative flex items-center justify-center p-0 sm:px-8 sm:p-6 md:p-8">
         <div className="absolute inset-0">
           <Image
             src="/images/border.svg"
@@ -21,7 +21,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
           />
         </div>
 
-        <div className="relative bg-[#0a4331] dark:bg-[#043024] text-white p-4 sm:p-6 md:p-8 rounded-lg h-full flex flex-col m-2 sm:m-3 md:m-4">
+        <div className="relative bg-[#0a4331] dark:bg-[#043024] text-white w-full p-4 sm:p-6 md:p-8 rounded-lg h-full flex flex-col m-2 sm:m-3 md:m-4">
           <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">
             Real Stories, Real Impact
           </h2>
