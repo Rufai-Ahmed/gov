@@ -7,7 +7,6 @@ import Fingerprint from "../../icons/fingerprint";
 import NoPhone from "../../icons/no-phone";
 import Banner from "./banner";
 import { useTheme } from "next-themes";
-import React from "react";
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -31,6 +30,7 @@ const Hero = () => {
   const feature2Desc = isDarkMode
     ? "Imagine world where your fingerprint na your wallet, and money matter no get boundary again."
     : "Imagine a world where your fingerprint replaces your wallet, and financial access transcends boundaries.";
+  const buttonText = isDarkMode ? "Get Am Now" : "Get It Now";
 
   return (
     <section className="container relative mx-auto px-6 flex flex-col items-center min-h-[70vh] justify-center">
@@ -73,6 +73,8 @@ const Hero = () => {
             title={feature1Title}
             description={feature1Desc}
             delay={0.6}
+            buttonText={buttonText}
+            showButton={true}
           />
 
           <FeatureCard
@@ -80,6 +82,8 @@ const Hero = () => {
             title={feature2Title}
             description={feature2Desc}
             delay={0.8}
+            buttonText={buttonText}
+            showButton={true}
           />
         </div>
       </motion.div>

@@ -20,9 +20,7 @@ const Footer = () => {
             <div className="space-y-2">
               <h3 className="font-semibold text-lg">Head Office:</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                14th Floor, Udom Emmanuel Towers, Banking Layout, Udo
-                <br />
-                Udoma Avenue, Uyo 521110, Akwa Ibom State, Nigeria.
+                No.3 Ikot Ekpene Road, Abak 520103 Akwa Ibom State., Nigeria.
               </p>
             </div>
 
@@ -53,7 +51,7 @@ const Footer = () => {
           {/* Products Section */}
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-green-400">PRODUCTS</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               <li>
                 <Link
                   href="#"
@@ -100,7 +98,7 @@ const Footer = () => {
           {/* Who We Serve Section */}
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-green-400">WHO WE SERVE</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               <li>
                 <Link
                   href="#"
@@ -137,9 +135,9 @@ const Footer = () => {
           </div>
 
           {/* Company Section */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <h2 className="text-xl font-bold text-green-400">COMPANY</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               <li>
                 <Link
                   href="#"

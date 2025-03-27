@@ -50,7 +50,7 @@ const Banner = () => {
                 }`}
               >
                 {" "}
-                10 African Countries
+                African Countries
               </p>
             </div>
 

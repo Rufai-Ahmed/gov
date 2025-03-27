@@ -8,10 +8,9 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Personal", href: "/personal" },
-  { label: "Business", href: "/business" },
-  { label: "Company", href: "/company" },
-  { label: "Sign Up", href: "/sign-up" },
+  { label: "Products", href: "/products" },
+  { label: "Who We serve", href: "/who-we-serve" },
+  { label: "About Us", href: "/about-us" },
 ];
 
 export function Header() {
@@ -38,7 +37,7 @@ export function Header() {
           asChild
           className="hidden md:inline-flex"
         >
-          <Link href="/register">Register</Link>
+          <Link href="/sign-up">Sign Up</Link>
         </Button>
       </div>
     </header>

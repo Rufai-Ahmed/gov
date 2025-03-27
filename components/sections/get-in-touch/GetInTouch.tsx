@@ -13,7 +13,7 @@ const GetInTouch = () => {
       <div className="max-w-3xl mx-auto">
         <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#1a5741] dark:text-white mb-4 sm:mb-6">
-            {isDarkMode ? "Make We Link Up!" : "Get In Touch with Us"}
+            {isDarkMode ? "Make We Link Up!" : "Get In Touch With Us"}
           </h1>
 
           <div className="text-gray-700 dark:text-[#749797] text-center text-sm sm:text-base mb-8 sm:mb-12 max-w-md sm:max-w-lg md:max-w-2xl mx-auto">
@@ -37,7 +37,7 @@ const GetInTouch = () => {
                 htmlFor="firstName"
                 className="block text-gray-700 dark:text-gray-200 font-medium"
               >
-                First name<span className="text-red-500">*</span>
+                First Name<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -54,14 +54,14 @@ const GetInTouch = () => {
                 htmlFor="lastName"
                 className="block text-gray-700 dark:text-gray-200 font-medium"
               >
-                Last name<span className="text-red-500">*</span>
+                Last Name<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 id="lastName"
                 name="lastName"
                 required
-                placeholder="Joel"
+                placeholder="Nsikak"
                 className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white/90 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
@@ -80,7 +80,7 @@ const GetInTouch = () => {
                 id="email"
                 name="email"
                 required
-                placeholder="idaraekhong@gmail.com"
+                placeholder="idaransikak@gmail.com"
                 className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white/90 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
@@ -90,7 +90,7 @@ const GetInTouch = () => {
                 htmlFor="phone"
                 className="block text-gray-700 dark:text-gray-200 font-medium"
               >
-                Phone Number<span className="text-red-500">*</span>
+                Phone number<span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"

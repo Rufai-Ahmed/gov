@@ -30,20 +30,21 @@ const AboutWepay = () => {
             </p>
           ) : (
             <p className="text-gray-700 text-lg leading-relaxed">
-              WePay Mobile Solutions Limited is redefining finance in Africa
-              through biometric authentication. Our robust infrastructure is
-              built on strategic partnerships with leading fintech companies,
-              banks, and local merchants across the continent, creating a
-              network that empowers underbanked populations with secure,
-              inclusive financial services. With WePay, users can conduct
-              financial transactions and access their funds using only their
-              fingerprints, eliminating the need for traditional cards or
-              smartphones. This approach simplifies the payment process and
-              empowers everyone, especially those in underbanked markets to
-              participate confidently in the digital economy. At WePay,
-              we&apos;re taking fintech beyond mere digital banking and into
-              identity banking. We&apos;re architects of financial inclusion. We
-              build bridges where traditional banking creates walls.
+              WePay Mobile Solutions Limited is redefining payments in Africa
+              through cutting-edge biometric technology. Our robust
+              infrastructure is built on strategic partnerships with leading
+              fintech companies, banks, and local merchants across the
+              continent, creating a network that empowers underbanked
+              populations with secure, inclusive financial services. With WePay,
+              users can conduct financial transactions and access their funds
+              using only their fingerprints, eliminating the need for
+              traditional cards or smartphones. This approach simplifies the
+              payment process and empowers everyone, especially those in
+              underbanked markets to participate confidently in the digital
+              economy. At WePay, we&apos;re taking fintech beyond mere digital
+              banking and into identity banking. We&apos;re architects of
+              financial inclusion. We build bridges where traditional banking
+              creates walls.
             </p>
           )}
         </div>
