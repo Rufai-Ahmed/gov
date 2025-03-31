@@ -45,7 +45,7 @@ export function FeatureCard({
           transition={{ duration: 0.5, delay: delay + 0.3 }}
         >
           <Button
-            className="bg-brand-500 hover:bg-brand-600 dark:bg-green-500 text-white font-medium px-6 py-2 rounded-full"
+            className="bg-[#00d642] hover:bg-brand-600 dark:bg-green-500 text-white font-medium px-6 py-2 rounded-full"
             size="sm"
           >
             {buttonText}
