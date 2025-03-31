@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <section className=" w-[100%]">
       {/* Inner */}
-      <div className="w-[100%] flex mt-20 justify-center text-center ">
+      <div className="w-[100%] flex mt-14 justify-center text-center ">
         <div className="w-[90%] bg-[#043024] border border-[#0F7760] flex rounded-[32px] py-[16px] px-[20px] sm:px-[40px]">
           <div className="flex items-center space-y-3 justify-around flex-wrap w-full">
             {/* 360 */}
