@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useTheme } from "next-themes";
 import { ChevronDown } from "lucide-react";
@@ -160,6 +161,30 @@ const FAQSection = () => {
     },
   ];
 
+  // Special rendering for contact information
+  const renderContactInfo = (item: any, isDarkMode: boolean) => {
+    const answer = isDarkMode ? item.pidginAnswer : item.englishAnswer;
+
+    if (item.englishQuestion === "How can I contact WePay?") {
+      const lines = item.englishAnswer.split("\n");
+      return (
+        <div className="space-y-2 text-lg">
+          <p>{lines[0]}</p>
+          <p>{lines[1]}</p>
+          <p>
+            Email:{" "}
+            <a href="mailto:contact@wepayweb.com" className="underline">
+              contact@wepayweb.com
+            </a>
+          </p>
+          <p>{lines[3]}</p>
+        </div>
+      );
+    }
+
+    return <p>{answer}</p>;
+  };
+
   return (
     <div
       className={`min-h-screen ${
@@ -181,13 +206,17 @@ const FAQSection = () => {
               key={index}
               className={`rounded-lg overflow-hidden ${
                 isDarkMode ? "bg-[#054332]" : "bg-[#d0f7e9]"
+              } ${
+                item.englishQuestion === "How can I contact WePay?"
+                  ? "contact-info-card"
+                  : ""
               }`}
             >
               <button
                 onClick={() => toggleItem(index)}
                 className={`w-full p-4 text-left flex justify-between items-center ${
                   isDarkMode ? "text-white" : "text-[#1a5741]"
-                } font-medium`}
+                } font-medium text-xl`}
               >
                 <span>
                   {isDarkMode ? item.pidginQuestion : item.englishQuestion}
@@ -207,10 +236,11 @@ const FAQSection = () => {
                 style={{
                   maxHeight: openItem === index ? "1000px" : "0",
                   opacity: openItem === index ? 1 : 0,
-                  padding: openItem === index ? "1rem" : "0 1rem",
+                  padding:
+                    openItem === index ? "1rem 1.5rem 1.5rem" : "0 1.5rem",
                 }}
               >
-                <p>{isDarkMode ? item.pidginAnswer : item.englishAnswer}</p>
+                {renderContactInfo(item, isDarkMode)}
               </div>
             </div>
           ))}
