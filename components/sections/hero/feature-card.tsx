@@ -23,7 +23,7 @@ export function FeatureCard({
 }: FeatureCardProps) {
   return (
     <motion.div
-      className="bg-white dark:bg-transparent rounded-3xl p-4 border flex flex-col justify-between py-10 items-center text-center h-[350px] w-[250px]"
+      className="bg-white dark:bg-transparent rounded-3xl p-4 border flex flex-col justify-between py-10 items-center text-center dark:h-[390px] h-[350px] w-[250px]"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: delay }}
@@ -45,7 +45,7 @@ export function FeatureCard({
           transition={{ duration: 0.5, delay: delay + 0.3 }}
         >
           <Button
-            className="bg-brand-500 hover:bg-brand-600 text-white font-medium px-6 py-2 rounded-full"
+            className="bg-brand-500 hover:bg-brand-600 dark:bg-green-500 text-white font-medium px-6 py-2 rounded-full"
             size="sm"
           >
             {buttonText}
