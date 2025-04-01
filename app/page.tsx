@@ -1,4 +1,5 @@
 import FAQSection from "@/components/faq/faq-section";
+import ChatWithUs from "@/components/icons/chat-with-us";
 import AboutWepay from "@/components/sections/about/AboutWepay";
 import Better from "@/components/sections/better/better";
 import Footer from "@/components/sections/footer/Footer";
@@ -20,6 +21,7 @@ const Page = () => {
       <FAQSection />
       <GetInTouch />
       <Footer />
+      <ChatWithUs />
     </div>
   );
 };
