@@ -14,7 +14,7 @@ const GetStarted = () => {
         <div className="flex flex-col justify-between">
           <h1 className="text-[30px] mb-10 font-bold text-[#043024] dark:text-white text-center">
             {isDarkMode
-              ? "How to take open Wepay Account"
+              ? "How To Take open Wepay Account"
               : "Get started with WePay"}
           </h1>
 
