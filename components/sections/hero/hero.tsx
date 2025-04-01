@@ -25,7 +25,7 @@ const Hero = () => {
     ? "Enjoy banking wey dey secure and smooth. Send money, pay bills, and buy things sharp-sharp."
     : "Experience secure, seamless banking. Send money, pay bills, and make purchases instantly.";
   const feature2Title = isDarkMode
-    ? "what If losing Your Phone No Mean Anything?"
+    ? "What If Losing Your Phone No Mean Anything?"
     : "What If Losing Your Phone Meant Nothing?";
   const feature2Desc = isDarkMode
     ? "Imagine world where your fingerprint na your wallet, and money matter no get boundary again."
