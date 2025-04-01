@@ -10,7 +10,7 @@ const Transform = () => {
     <section className="min-h-[70vh] py-20 bg-[radial-gradient(circle_at_50%_75%,#DEFEE8,white)] dark:bg-[radial-gradient(circle_at_top_left,#00261e,#043024)] text-center">
       <div className="container mx-auto px-10 lg:px-20 space-y-10">
         <h1 className="font-bold text-[#043024] dark:text-white text-[30px]">
-          Transform Your Financial Journey with WePay!
+          Transform Your Financial Journey With WePay!
         </h1>
 
         <div className="grid grid-cols-6 gap-6 xl:px-20">
