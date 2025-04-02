@@ -9,7 +9,7 @@ const GetInTouch = () => {
   const isDarkMode = theme === "dark";
 
   return (
-    <div className="min-h-screen bg-[#e6fff5] dark:bg-[#043024] py-16 mt-20 px-4">
+    <div className="min-h-screen bg-[#e6fff5] dark:bg-[#043024] py-16  px-4">
       <div className="max-w-3xl mx-auto">
         <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#1a5741] dark:text-white mb-4 sm:mb-6">

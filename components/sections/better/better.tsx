@@ -18,7 +18,7 @@ const Better = () => {
     ? "Your fingerprint na your only key, and we lock am with strong encryption."
     : "Your fingerprint is your only key, protected by advanced encryption.";
 
-  const card2Title = "Effortless convenience";
+  const card2Title = "Effortless Convenience";
   const card2Content = isDarkMode
     ? "No card, no phone—touch and make payment anytime, anywhere."
     : "No cards, no phones—access your money anytime, anywhere.";
@@ -26,7 +26,7 @@ const Better = () => {
   const card3Title = "Affordable Banking Solutions";
   const card3Content = isDarkMode ? (
     <span>
-      <span className="font-extrabold text-[#00ea48]">
+      <span className="font-extrabold text-green-500">
         To make money hard, but to commot am no suppose hard.
       </span>
       WePay offers transparent, low-cost transaction fees, making banking
