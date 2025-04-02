@@ -189,7 +189,7 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="#"
+                href="https://wa.me/2348165300908"
                 className="bg-[#25D366] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <FaWhatsapp size={18} />
