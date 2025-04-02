@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { Logo } from "@/components/ui/logo";
 
 const Footer = () => {
@@ -193,6 +193,13 @@ const Footer = () => {
                 className="bg-[#25D366] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <FaWhatsapp size={18} />
+                <span className="sr-only">WhatsApp</span>
+              </Link>
+              <Link
+                href="https://www.tiktok.com/@wepay63?_t=ZM-8vCm1uhKuO6&_r=1"
+                className="bg-black p-2 rounded-full hover:opacity-80 transition-opacity"
+              >
+                <FaTiktok size={18} color="white" />
                 <span className="sr-only">WhatsApp</span>
               </Link>
             </div>
