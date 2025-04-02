@@ -34,7 +34,7 @@ const Better = () => {
     </span>
   ) : (
     <span>
-      <span className="text-brand">
+      <span className="font-extrabold text-[#00ea48]">
         Making money is hard, withdrawing it shouldn&apos;t be.
       </span>{" "}
       WePay offers transparent, low-cost transaction fees, making banking
