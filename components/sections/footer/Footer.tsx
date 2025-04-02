@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-semibold text-lg">Akwa Ibom:</h3>
+              <h3 className="font-semibold text-lg">Akwa Ibom Office:</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 No.3 Ikot Ekpene Road, Abak 520103 Akwa Ibom State.
               </p>
