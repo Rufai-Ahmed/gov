@@ -32,7 +32,7 @@ const GetStarted = () => {
                   isDarkMode ? "text-white" : "text-[#043024]"
                 }  text-[30px]    mb-6   max-sm:text-[16px]`}
               >
-                Download the app
+                Download The app
               </h3>
             </div>
           </div>
@@ -55,7 +55,7 @@ const GetStarted = () => {
                   isDarkMode ? "text-white" : "text-[#043024]"
                 } text-[30px]   mb-1 text-lg     max-sm:text-[16px]`}
               >
-                Sign Up with Biometrics
+                Sign Up With Biometrics
               </h3>
               <p
                 className={`${
@@ -86,7 +86,7 @@ const GetStarted = () => {
               >
                 {" "}
                 {isDarkMode
-                  ? "Put Money for Your Account"
+                  ? "Put Money For Your Account"
                   : "Fund Your Account"}{" "}
               </h3>
               <p

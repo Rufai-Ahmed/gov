@@ -34,7 +34,7 @@ const JoinWepay = () => {
   }, [api]);
 
   return (
-    <div className="min-h-[85vh] bg-[#e6fff5] dark:bg-[#043024] flex flex-col items-center py-12 md:py-20 px-4 sm:px-6 md:px-8">
+    <div className="bg-[#e6fff5] dark:bg-[#043024] flex flex-col items-center py-8 md:py-16 px-4 sm:px-6 md:px-8">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-[#1a5741] dark:text-white leading-tight">
         Join The WePay Revolution Today!
       </h1>
