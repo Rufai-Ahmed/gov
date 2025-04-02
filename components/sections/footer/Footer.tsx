@@ -161,28 +161,28 @@ const Footer = () => {
 
             <div className="flex space-x-3 mt-6">
               <Link
-                href="#"
+                href="https://www.instagram.com/wepay_ng?igsh=MTNmenRtNXZ4aHIzYw=="
                 className="bg-[#E1306C] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Instagram size={18} />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.facebook.com/share/1BPJyZtxme/"
                 className="bg-[#1877F2] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Facebook size={18} />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="#"
+                href="https://x.com/WePayNG?t=Lq1UgvBrFMst3U8evLoSpg&s=09"
                 className="bg-black p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Twitter size={18} />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/wepayng/"
                 className="bg-[#0A66C2] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Linkedin size={18} />
