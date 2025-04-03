@@ -29,7 +29,7 @@ const Footer = () => {
               <p className="text-gray-300 text-sm leading-relaxed">
                 3rd Floor, Workcity, Plot 1, Maruwa Bus Stop, 128 Remi
                 <br />
-                Olowude Street, Lekki Phase 1, Lagos 105102,
+                Olowude Street, Lekki Phase 1, Lagos 532101,
                 <br />
                 Lagos State, Nigeria.
               </p>
