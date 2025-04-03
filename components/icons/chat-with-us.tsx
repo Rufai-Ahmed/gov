@@ -4,8 +4,8 @@ const ChatWithUS = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 cursor-pointer hover:opacity-90 transition-opacity duration-300">
       <svg
-        width="210"
-        height="130"
+        width="200"
+        height="100"
         viewBox="0 0 210 130"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

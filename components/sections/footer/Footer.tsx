@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
-import { FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { Logo } from "@/components/ui/logo";
 
 const Footer = () => {
@@ -159,7 +159,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <div className="flex space-x-3 mt-6">
+            <div className="flex flex-wrap gap-2 mt-6 md:justify-start">
               <Link
                 href="https://www.instagram.com/wepay_ng?igsh=MTNmenRtNXZ4aHIzYw=="
                 className="bg-[#E1306C] p-2 rounded-full hover:opacity-80 transition-opacity"
@@ -201,6 +201,13 @@ const Footer = () => {
               >
                 <FaTiktok size={18} color="white" />
                 <span className="sr-only">WhatsApp</span>
+              </Link>
+              <Link
+                href="https://youtube.com/@wepayng?si=mygyBKNdOxqsEmMJ"
+                className="bg-slate-200 p-2 rounded-full hover:opacity-80 transition-opacity"
+              >
+                <FaYoutube size={18} color="red" />
+                <span className="sr-only">Youtube</span>
               </Link>
             </div>
           </div>
