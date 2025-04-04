@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="space-y-2">
               <h3 className="font-semibold text-lg">Akwa Ibom Office</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                No.3 Ikot Ekpene Road, Abak 520103 Akwa Ibom State.
+                No.3 Ikot Ekpene Road, Abak 532101 Akwa Ibom State.
               </p>
             </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
               <p className="text-gray-300 text-sm leading-relaxed">
                 3rd Floor, Workcity, Plot 1, Maruwa Bus Stop, 128 Remi
                 <br />
-                Olowude Street, Lekki Phase 1, Lagos 532101,
+                Olowude Street, Lekki Phase 1, Lagos 105102,
                 <br />
                 Lagos State, Nigeria.
               </p>

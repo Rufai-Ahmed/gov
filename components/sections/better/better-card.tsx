@@ -28,10 +28,11 @@ const BetterCard: FC<BetterCardProps> = ({
         transition={{ duration: 0.8, delay }}
       >
         {/* Example icon */}
-       <h4 className="w-full justify-center flex mb-4">{icon}</h4> 
-        <h3 className="mb-2 text-[23px] dark:text-white text-[#043024] font-bold">{title}</h3>
-        <p className="text-[#043024] dark:text-white dark:opacity-50">{content}</p>
-
+        <h4 className="w-full justify-center flex mb-4">{icon}</h4>
+        <h3 className="mb-2 text-[23px] dark:text-white text-[#043024] font-bold">
+          {title}
+        </h3>
+        <p className="text-[#043024] dark:text-white ">{content}</p>
       </motion.div>
     </div>
   );

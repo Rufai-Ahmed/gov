@@ -26,7 +26,7 @@ const Better = () => {
   const card3Title = "Affordable Banking Solutions";
   const card3Content = isDarkMode ? (
     <span>
-      <span className="font-extrabold text-green-500">
+      <span className="font-extrabold text-green-500 dark:text-[#00ea48]">
         To make money hard, but to commot am no suppose hard.
       </span>
       WePay offers transparent, low-cost transaction fees, making banking
