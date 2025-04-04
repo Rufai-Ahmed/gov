@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
 
             <div className="border-t border-gray-700 my-6 pt-6 space-y-2">
-              <h3 className="font-semibold text-lg">Lagos Office:</h3>
+              <h3 className="font-semibold text-lg">Lagos Office</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 3rd Floor, Workcity, Plot 1, Maruwa Bus Stop, 128 Remi
                 <br />
