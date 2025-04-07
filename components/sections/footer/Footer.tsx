@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { Logo } from "@/components/ui/logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#003024] text-white py-16 mt-20">
+    <footer className="bg-[#003024] text-white py-16 ">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo and Address Section */}
@@ -18,16 +18,14 @@ const Footer = () => {
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-semibold text-lg">Head Office:</h3>
+              <h3 className="font-semibold text-lg">Akwa Ibom Office</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                14th Floor, Udom Emmanuel Towers, Banking Layout, Udo
-                <br />
-                Udoma Avenue, Uyo 521110, Akwa Ibom State, Nigeria.
+                No.3 Ikot Ekpene Road, Abak 532101, Akwa Ibom State.
               </p>
             </div>
 
             <div className="border-t border-gray-700 my-6 pt-6 space-y-2">
-              <h3 className="font-semibold text-lg">Branch Office:</h3>
+              <h3 className="font-semibold text-lg">Lagos Office</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 3rd Floor, Workcity, Plot 1, Maruwa Bus Stop, 128 Remi
                 <br />
@@ -53,7 +51,7 @@ const Footer = () => {
           {/* Products Section */}
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-green-400">PRODUCTS</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               <li>
                 <Link
                   href="#"
@@ -100,7 +98,7 @@ const Footer = () => {
           {/* Who We Serve Section */}
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-green-400">WHO WE SERVE</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               <li>
                 <Link
                   href="#"
@@ -137,9 +135,9 @@ const Footer = () => {
           </div>
 
           {/* Company Section */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <h2 className="text-xl font-bold text-green-400">COMPANY</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               <li>
                 <Link
                   href="#"
@@ -161,41 +159,55 @@ const Footer = () => {
               </li>
             </ul>
 
-            <div className="flex space-x-3 mt-6">
+            <div className="flex flex-wrap gap-2 mt-6 md:justify-start">
               <Link
-                href="#"
+                href="https://www.instagram.com/wepay_ng?igsh=MTNmenRtNXZ4aHIzYw=="
                 className="bg-[#E1306C] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Instagram size={18} />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.facebook.com/share/1BPJyZtxme/"
                 className="bg-[#1877F2] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Facebook size={18} />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="#"
+                href="https://x.com/WePayNG?t=Lq1UgvBrFMst3U8evLoSpg&s=09"
                 className="bg-black p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Twitter size={18} />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/wepayng/"
                 className="bg-[#0A66C2] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <Linkedin size={18} />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="#"
+                href="https://wa.me/2348165300908"
                 className="bg-[#25D366] p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <FaWhatsapp size={18} />
                 <span className="sr-only">WhatsApp</span>
+              </Link>
+              <Link
+                href="https://wa.me/message/JJGMR2OU5KCSO1"
+                className="bg-black p-2 rounded-full hover:opacity-80 transition-opacity"
+              >
+                <FaTiktok size={18} color="white" />
+                <span className="sr-only">WhatsApp</span>
+              </Link>
+              <Link
+                href="https://youtube.com/@wepayng?si=mygyBKNdOxqsEmMJ"
+                className="bg-slate-200 p-2 rounded-full hover:opacity-80 transition-opacity"
+              >
+                <FaYoutube size={18} color="red" />
+                <span className="sr-only">Youtube</span>
               </Link>
             </div>
           </div>

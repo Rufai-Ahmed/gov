@@ -99,7 +99,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                     onClick={() => setIsOpen(false)}
                     asChild
                   >
-                    <a href="/register">Register</a>
+                    <a href="signup">Sign Up</a>
                   </Button>
                 </div>
               </div>

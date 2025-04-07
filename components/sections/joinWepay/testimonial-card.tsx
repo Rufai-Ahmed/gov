@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import type React from "react";
 import type { Testimonial } from "./testimonial";
 import Image from "next/image";
+import Fave from "@/components/icons/fave";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
@@ -39,14 +39,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
                 {testimonial.title}
               </p>
             </div>
-            <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-green-300 self-end sm:self-auto">
-              <img
-                src={
-                  testimonial.avatar || "/placeholder.svg?height=64&width=64"
-                }
-                alt={testimonial.name}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-green-300 self-end sm:self-auto flex items-center justify-center">
+              <Fave />
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import type { Testimonial } from "./testimonial";
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Isaac Samuel",
+    name: "John Peters ",
     title: "Small Business Owner",
     content:
       "WePay's biometric payment solution has been a game-changer for me. Easy setup, reliable transactions, and excellent customer support. Highly recommend!",
@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Idara Ekong",
+    name: "Ekere Umoh",
     title: "Marketplace Owner",
     content:
       "The seamless onboarding and biometric security have made transactions easier and safer.",
