@@ -101,7 +101,7 @@ export default function Form() {
                 id="fullName"
                 placeholder="Idara"
                 {...register("fullName")}
-                className="w-full px-4 py-3 rounded-lg border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959]"
+                className="w-full px-4 py-3 rounded-lg text-black border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959]"
               />
               {errors.fullName && (
                 <p className="text-red-500 text-sm mt-1">
@@ -123,7 +123,7 @@ export default function Form() {
                 id="email"
                 placeholder="idaransikak@gmail.com"
                 {...register("email")}
-                className="w-full px-4 py-3 rounded-lg border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959]"
+                className="w-full px-4 py-3 rounded-lg text-black border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959]"
                 required
               />
               {errors.email && (
@@ -146,7 +146,7 @@ export default function Form() {
                 id="phone"
                 placeholder="+234"
                 {...register("phone")}
-                className="w-full px-4 py-3 rounded-lg border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959]"
+                className="w-full px-4 py-3 rounded-lg text-black border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959]"
               />
             </div>
 
@@ -163,7 +163,7 @@ export default function Form() {
                 <button
                   type="button"
                   onClick={toggleDropdown}
-                  className="w-full px-4 py-3 rounded-lg border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959] text-left flex justify-between items-center"
+                  className="w-full px-4 py-3 rounded-lg text-black border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959] text-left flex justify-between items-center"
                 >
                   {watch("excitedAbout") || selectedOption}
                   <FaCheck color="green" />
