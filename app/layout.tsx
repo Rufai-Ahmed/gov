@@ -2,6 +2,8 @@ import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "sonner";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -19,9 +21,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
-
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
@@ -31,6 +30,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {" "}
+          <Toaster />
           <div className="relative flex min-h-screen flex-col">
             <Header />
             <div className="flex-1">{children}</div>

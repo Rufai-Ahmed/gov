@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { google } from "googleapis";
+import mongoose from "mongoose";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
 
 interface CustomSMTPTransportOptions extends SMTPTransport.Options {
@@ -22,6 +23,25 @@ const oauth2Client = new OAuth2(
 oauth2Client.setCredentials({
   refresh_token: process.env.REFRESH_TOKEN!,
 });
+
+const WaitlistSchema = new mongoose.Schema({
+  fullName: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  phone: { type: String },
+  excitedAbout: { type: String },
+  createdAt: { type: Date, default: Date.now },
+});
+
+const Waitlist =
+  mongoose.models.Waitlist || mongoose.model("Waitlist", WaitlistSchema);
+
+const connectToDB = async () => {
+  if (mongoose.connection.readyState >= 1) return;
+  if (!process.env.MONGODB_URI) {
+    throw new Error("Missing MONGODB_URI in environment variables");
+  }
+  await mongoose.connect(process.env.MONGODB_URI);
+};
 
 async function sendWaitlistEmail(to: string, fullName: string) {
   try {
@@ -53,7 +73,6 @@ async function sendWaitlistEmail(to: string, fullName: string) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Welcome to the Waitlist!</title>
         <style>
-          /* Inline CSS for broad compatibility */
           body {
             margin: 0;
             padding: 0;
@@ -118,7 +137,7 @@ async function sendWaitlistEmail(to: string, fullName: string) {
     };
 
     const result = await transporter.sendMail(mailOptions);
-    console.log({result})
+    console.log({ result });
     return result;
   } catch (error) {
     console.error("Error sending waitlist email:", error);
@@ -128,20 +147,35 @@ async function sendWaitlistEmail(to: string, fullName: string) {
 
 export async function POST(request: Request) {
   try {
-    const { email, fullName } = await request.json();
+    await connectToDB();
+
+    const { email, fullName, phone, excitedAbout } = await request.json();
     if (!email || !fullName) {
       return NextResponse.json(
         { error: "Missing required fields: email and fullName" },
         { status: 400 }
       );
     }
+
+    const existingUser = await Waitlist.findOne({ email });
+    if (existingUser) {
+      return NextResponse.json(
+        { error: "You have already joined the waitlist" },
+        { status: 409 }
+      );
+    }
+
+    const newEntry = new Waitlist({ email, fullName, phone, excitedAbout });
+    await newEntry.save();
+
     await sendWaitlistEmail(email, fullName);
+
     return NextResponse.json(
       { message: "Waitlist email sent successfully" },
       { status: 200 }
     );
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
+    console.error("Error in POST /api/waitlist/confirm:", error);
     return NextResponse.json(
       { error: "Failed to send waitlist email" },
       { status: 500 }

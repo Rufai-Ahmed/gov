@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React, { useState } from "react";
@@ -7,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Check } from "lucide-react";
 import { FaCheck } from "react-icons/fa";
+import { toast } from "sonner";
 
 const schema = z.object({
   fullName: z.string().min(2, "Full name is required"),
@@ -23,6 +25,7 @@ type FormData = z.infer<typeof schema>;
 export default function Form() {
   const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const [selectedOption, setSelectedOption] = useState(
     "Biometric payment technology"
   );
@@ -46,7 +49,7 @@ export default function Form() {
 
   const selectOption = (option: string) => {
     setSelectedOption(option);
-    setValue("excitedAbout", option); 
+    setValue("excitedAbout", option);
     setDropdownOpen(false);
   };
 
@@ -58,17 +61,25 @@ export default function Form() {
         body: JSON.stringify({
           email: data.email,
           fullName: data.fullName,
+          phone: data.phone,
+          excitedAbout: data.excitedAbout,
         }),
       });
 
       if (!response.ok) {
-        throw new Error("Something went wrong. Please try again.");
+        const responseData = await response.json();
+        if (responseData.error === "You have already joined the waitlist") {
+          toast.info("You have already joined the waitlist.");
+          return;
+        }
+        throw new Error(
+          responseData.error || "Something went wrong. Please try again."
+        );
       }
 
       router.push("/success");
     } catch (error) {
-      console.error("Error submitting waitlist form:", error);
-      alert("An error occurred. Please try again.");
+      toast.error(" An error occurred. Please try again.");
     }
   };
 
