@@ -119,7 +119,7 @@ async function sendWaitlistEmail(to: string, fullName: string) {
               We’re thrilled to have you onboard. Your journey towards a seamless payment experience starts here.
               Stay tuned for the latest updates and exclusive sneak peeks.
             </p>
-            <a href="https://wepay.com/updates" class="button">View Updates</a>
+            <a href="https://wepayweb.com" class="button">View Updates</a>
           </div>
           <div class="footer">
             <p>If you did not sign up for this waitlist, please ignore this email.</p>
@@ -137,7 +137,6 @@ async function sendWaitlistEmail(to: string, fullName: string) {
     };
 
     const result = await transporter.sendMail(mailOptions);
-    console.log({ result });
     return result;
   } catch (error) {
     console.error("Error sending waitlist email:", error);
