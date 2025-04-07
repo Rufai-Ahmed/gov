@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="space-y-2">
               <h3 className="font-semibold text-lg">Akwa Ibom Office</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                No.3 Ikot Ekpene Road, Abak 532101 Akwa Ibom State.
+                No.3 Ikot Ekpene Road, Abak 532101, Akwa Ibom State.
               </p>
             </div>
 
@@ -196,7 +196,7 @@ const Footer = () => {
                 <span className="sr-only">WhatsApp</span>
               </Link>
               <Link
-                href="https://www.tiktok.com/@wepay63?_t=ZM-8vCm1uhKuO6&_r=1"
+                href="https://wa.me/message/JJGMR2OU5KCSO1"
                 className="bg-black p-2 rounded-full hover:opacity-80 transition-opacity"
               >
                 <FaTiktok size={18} color="white" />
