@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 interface FeatureCardProps {
   icon: ReactNode;
@@ -21,6 +22,12 @@ export function FeatureCard({
   buttonText = "Get It Now",
   showButton = false,
 }: FeatureCardProps) {
+  const router = useRouter();
+
+  const handleWaitlistClick = () => {
+    router.push("/waitlist");
+  };
+
   return (
     <motion.div
       className="bg-white dark:bg-transparent rounded-3xl p-4 border flex flex-col justify-between py-10 items-center text-center dark:h-[390px] h-[350px] w-[250px]"
@@ -47,6 +54,7 @@ export function FeatureCard({
           <Button
             className="bg-[#00d642] hover:bg-brand-600 dark:bg-green-500 text-white font-medium px-6 py-2 rounded-full"
             size="sm"
+            onClick={handleWaitlistClick}
           >
             {buttonText}
           </Button>

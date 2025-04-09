@@ -1,11 +1,17 @@
 "use client";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import CountUp from "react-countup";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 const Banner = () => {
   const { theme } = useTheme();
+  const router = useRouter();
   const isDarkMode = theme === "dark";
+
+  const handleWaitlistClick = () => {
+    router.push("/waitlist");
+  };
 
   return (
     <section className="w-[100%]">
@@ -70,17 +76,14 @@ const Banner = () => {
               </div>
             </div>
 
-            {/* Google Play */}
+            {/* Join The Waitlist Button (replacing Google Play) */}
             <div className="w-full sm:w-[25%] lg:w-[20%] flex justify-center sm:justify-end mt-6 sm:mt-0">
-              <a>
-                <Image
-                  src={"/icons/googleplay.svg"}
-                  width={100}
-                  height={100}
-                  className="w-[150px] sm:w-[180px] lg:w-[200px]"
-                  alt="GooglePlay store"
-                />
-              </a>
+              <Button
+                onClick={handleWaitlistClick}
+                className="bg-[#2ff86d] hover:bg-[#25c957] text-[#043024] font-semibold px-6 py-6 rounded-full text-base sm:text-lg h-auto"
+              >
+                Join The Waitlist
+              </Button>
             </div>
           </div>
         </div>

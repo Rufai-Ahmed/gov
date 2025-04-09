@@ -7,9 +7,11 @@ import Fingerprint from "../../icons/fingerprint";
 import NoPhone from "../../icons/no-phone";
 import Banner from "./banner";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
   const { theme } = useTheme();
+  const router = useRouter();
   const isDarkMode = theme === "dark";
 
   const heading = isDarkMode
@@ -30,7 +32,11 @@ const Hero = () => {
   const feature2Desc = isDarkMode
     ? "Imagine world where your fingerprint na your wallet, and money matter no get boundary again."
     : "Imagine a world where your fingerprint replaces your wallet, and financial access transcends boundaries.";
-  const buttonText = isDarkMode ? "Get Am Now" : "Get It Now";
+  const buttonText = isDarkMode ? "Join The Waitlist" : "Join The Waitlist";
+
+  const handleWaitlistClick = () => {
+    router.push("/waitlist");
+  };
 
   return (
     <section className="container relative mx-auto px-6 flex flex-col items-center min-h-[70vh] justify-center">
@@ -89,7 +95,10 @@ const Hero = () => {
       </motion.div>
 
       <div className="mt-14">
-        <button className="bg-[#00d642] text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition">
+        <button
+          onClick={handleWaitlistClick}
+          className="bg-[#00d642] text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition"
+        >
           Targeting
         </button>
       </div>
