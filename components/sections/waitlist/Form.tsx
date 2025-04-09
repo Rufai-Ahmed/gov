@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Check } from "lucide-react";
-import { FaCheck } from "react-icons/fa";
+import { FaAngleDown, FaCheck } from "react-icons/fa";
 import { toast } from "sonner";
 
 const schema = z.object({
@@ -166,7 +166,7 @@ export default function Form() {
                   className="w-full px-4 py-3 rounded-lg text-black dark:text-black border border-[#c5e8d5] bg-[#e6ffea] focus:outline-none focus:ring-2 focus:ring-[#00d959] text-left flex justify-between items-center"
                 >
                   {watch("excitedAbout") || selectedOption}
-                  <FaCheck color="green" />
+                  <FaAngleDown color="black" />
                 </button>
 
                 {dropdownOpen && (

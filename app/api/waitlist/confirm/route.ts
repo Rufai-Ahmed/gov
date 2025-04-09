@@ -112,6 +112,11 @@ async function sendWaitlistEmail(to: string, fullName: string) {
       </head>
       <body>
         <div class="container">
+         <img
+        src="/images/mainLogo.png"
+        alt="Welcome Image"
+        class="welcome-img"
+      />
           <h1>Welcome, ${fullName}!</h1>
           <div class="content">
             <h2>Thanks for joining the WePay Waitlist</h2>
