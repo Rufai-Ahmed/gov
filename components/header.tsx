@@ -41,7 +41,7 @@ export function Header() {
 
   return (
     <header
-      className={`container mx-auto w-full py-4 px-6 flex items-center justify-between transition-all duration-300 ease-in-out sticky z-40 top-0 ${
+      className={`w-full py-4 px-6 flex items-center justify-between transition-all duration-300 ease-in-out sticky z-40 top-0 ${
         hasScrolled ? "bg-white bg-opacity-80 backdrop-blur-lg" : ""
       }`}
     >
