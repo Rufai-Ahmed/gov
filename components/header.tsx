@@ -4,16 +4,22 @@ import { MainNav } from "@/components/main-nav";
 import { MobileSidebar } from "@/components/mobile-sidebar";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Products", href: "/products" },
-  { label: "Who We serve", href: "/who-we-serve" },
-  { label: "About Us", href: "/about-us" },
-];
-
 export function Header() {
+  const { theme } = useTheme();
+
+  const navItems = [
+    { label: "Home", href: "/" },
+    {
+      label: theme === "dark" ? "Why We Better Pass" : "Why We're Better",
+      href: "/products",
+    },
+    { label: "Who We serve", href: "/who-we-serve" },
+    { label: "About Us", href: "/about-us" },
+  ];
+
   return (
     <header className="container mx-auto w-full py-4 px-6 flex items-center justify-between">
       {/* Logo */}

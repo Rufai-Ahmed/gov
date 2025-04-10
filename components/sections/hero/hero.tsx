@@ -1,17 +1,15 @@
 "use client";
-import { ThemeToggle } from "../../ui/theme-toggle";
-import { AnimatedShapes } from "../../ui/animated-shapes";
 import { motion } from "framer-motion";
-import { FeatureCard } from "./feature-card";
+import { useTheme } from "next-themes";
 import Fingerprint from "../../icons/fingerprint";
 import NoPhone from "../../icons/no-phone";
+import { AnimatedShapes } from "../../ui/animated-shapes";
+import { ThemeToggle } from "../../ui/theme-toggle";
 import Banner from "./banner";
-import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
+import { FeatureCard } from "./feature-card";
 
 const Hero = () => {
   const { theme } = useTheme();
-  const router = useRouter();
   const isDarkMode = theme === "dark";
 
   const heading = isDarkMode
@@ -33,10 +31,6 @@ const Hero = () => {
     ? "Imagine world where your fingerprint na your wallet, and money matter no get boundary again."
     : "Imagine a world where your fingerprint replaces your wallet, and financial access transcends boundaries.";
   const buttonText = isDarkMode ? "Join The Waitlist" : "Join The Waitlist";
-
-  const handleWaitlistClick = () => {
-    router.push("/waitlist");
-  };
 
   return (
     <section className="container relative mx-auto px-6 flex flex-col items-center min-h-[70vh] justify-center">
