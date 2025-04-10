@@ -40,10 +40,10 @@ const Footer = () => {
                 DOWNLOAD OUR APP
               </h3>
               <Link
-                href="#"
+                href="/waitlist"
                 className="text-gray-300 text-sm underline hover:text-green-400 transition-colors"
               >
-                Google Playstore Link
+                Join The Waitlist
               </Link>
             </div>
           </div>
