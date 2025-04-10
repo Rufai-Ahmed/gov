@@ -37,6 +37,20 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
     };
   }, [isOpen]);
 
+  const handleScroll = (href: string) => {
+    setIsOpen(false);
+
+    // Handle hash links for smooth scrolling
+    if (href.startsWith("#")) {
+      setTimeout(() => {
+        const element = document.getElementById(href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // Delay to allow sidebar animation to complete
+    }
+  };
+
   return (
     <>
       <button
@@ -69,11 +83,12 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-0 left-0 h-full w-3/4 max-w-xs bg-background dark:bg-background z-50 md:hidden shadow-xl"
+              className="fixed top-0 left-0 h-full w-3/4 max-w-xs bg-white dark:bg-gray-900 z-50 md:hidden shadow-xl"
+              style={{ backgroundColor: "var(--background-solid, white)" }}
             >
               <div className="flex flex-col p-6 h-full">
                 <div className="flex items-center justify-between mb-8">
-                  <Logo onClick={() => setIsOpen(false)} />
+                  <Logo onClick={() => handleScroll("#home")} />
                   <ThemeToggle />
                 </div>
 
@@ -82,9 +97,15 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                     <NavLink
                       key={item.href}
                       href={item.href}
-                      active={pathname === item.href}
+                      active={
+                        pathname === item.href ||
+                        (pathname === "/" && item.href === "#home")
+                      }
                       className="text-xl"
-                      onClick={() => setIsOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleScroll(item.href);
+                      }}
                     >
                       {item.label}
                     </NavLink>
@@ -96,10 +117,10 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                     variant="brand"
                     size="lg"
                     className="w-full"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => handleScroll("#get-started")}
                     asChild
                   >
-                    <a href="signup">Sign Up</a>
+                    <a href="#get-started">Sign Up</a>
                   </Button>
                 </div>
               </div>

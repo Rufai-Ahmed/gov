@@ -12,14 +12,30 @@ import Transform from "@/components/sections/transform/transform";
 const Page = () => {
   return (
     <div>
-      <Hero />
-      <Better />
-      <GetStarted />
-      <Transform />
-      <JoinWepay />
-      <AboutWepay />
-      <FAQSection />
-      <GetInTouch />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="products">
+        <Better />
+      </div>
+      <div id="get-started">
+        <GetStarted />
+      </div>
+      <div id="transform">
+        <Transform />
+      </div>
+      <div id="join">
+        <JoinWepay />
+      </div>
+      <div id="about-us">
+        <AboutWepay />
+      </div>
+      <div id="faq">
+        <FAQSection />
+      </div>
+      <div id="contact">
+        <GetInTouch />
+      </div>
       <Footer />
       <ChatWithUs />
     </div>
