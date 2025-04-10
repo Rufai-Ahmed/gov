@@ -106,7 +106,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                     className="w-full"
                     onClick={() => handleNavClick("get-started")}
                   >
-                    Sign In
+                    Register
                   </Button>
                 </div>
               </div>
