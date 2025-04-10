@@ -99,7 +99,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                   ))}
                 </nav>
 
-                <div className="mt-auto">
+                {/* <div className="mt-auto">
                   <Button
                     variant="brand"
                     size="lg"
@@ -109,7 +109,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                   >
                     <a href="signup">Sign Up</a>
                   </Button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </>
