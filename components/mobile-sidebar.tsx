@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./ui/logo";
+import { Button } from "@/components/ui/button";
 
 interface NavItem {
   label: string;
@@ -78,7 +79,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-0 left-0 h-screen w-3/4 max-w-xs bg-background dark:bg-background z-60 md:hidden shadow-xl"
+              className="fixed top-0 left-0 h-screen w-3/4 max-w-xs bg-white dark:bg-gray-900 z-60 md:hidden shadow-xl"
             >
               <div className="flex flex-col p-6 h-full">
                 <div className="flex items-center justify-between mb-8">
@@ -89,7 +90,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                 <nav className="flex flex-col gap-6">
                   {navItems.map((item) => (
                     <button
-                      className="font-normal transition-colors text-[#003429B2] hover:text-brand dark:text-foreground dark:hover:text-brand text-xl"
+                      className="font-normal transition-colors text-[#003429B2] hover:text-brand dark:text-foreground dark:hover:text-brand text-xl text-left"
                       key={item.href}
                       onClick={() => handleNavClick(item.href)}
                     >
@@ -98,17 +99,16 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                   ))}
                 </nav>
 
-                {/* <div className="mt-auto">
+                <div className="mt-auto">
                   <Button
                     variant="brand"
                     size="lg"
                     className="w-full"
-                    onClick={() => setIsOpen(false)}
-                    asChild
+                    onClick={() => handleNavClick("get-started")}
                   >
-                    <a href="signup">Sign Up</a>
+                    Sign In
                   </Button>
-                </div> */}
+                </div>
               </div>
             </motion.div>
           </>
