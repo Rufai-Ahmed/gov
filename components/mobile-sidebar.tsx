@@ -1,12 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { NavLink } from "@/components/ui/nav-link";
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Logo } from "./ui/logo";
 
 interface NavItem {
@@ -37,17 +35,14 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
     };
   }, [isOpen]);
 
-  const handleScroll = (href: string) => {
-    setIsOpen(false);
-
-    // Handle hash links for smooth scrolling
-    if (href.startsWith("#")) {
-      setTimeout(() => {
-        const element = document.getElementById(href.substring(1));
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 300); // Delay to allow sidebar animation to complete
+  const handleNavClick = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      setIsOpen(false);
     }
   };
 
@@ -83,46 +78,37 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-0 left-0 h-full w-3/4 max-w-xs bg-white dark:bg-gray-900 z-50 md:hidden shadow-xl"
-              style={{ backgroundColor: "var(--background-solid, white)" }}
+              className="fixed top-0 left-0 h-screen w-3/4 max-w-xs bg-background dark:bg-background z-60 md:hidden shadow-xl"
             >
               <div className="flex flex-col p-6 h-full">
                 <div className="flex items-center justify-between mb-8">
-                  <Logo onClick={() => handleScroll("#home")} />
+                  <Logo onClick={() => setIsOpen(false)} />
                   <ThemeToggle />
                 </div>
 
                 <nav className="flex flex-col gap-6">
                   {navItems.map((item) => (
-                    <NavLink
+                    <button
+                      className="font-normal transition-colors text-[#003429B2] hover:text-brand dark:text-foreground dark:hover:text-brand text-xl"
                       key={item.href}
-                      href={item.href}
-                      active={
-                        pathname === item.href ||
-                        (pathname === "/" && item.href === "#home")
-                      }
-                      className="text-xl"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleScroll(item.href);
-                      }}
+                      onClick={() => handleNavClick(item.href)}
                     >
                       {item.label}
-                    </NavLink>
+                    </button>
                   ))}
                 </nav>
 
-                <div className="mt-auto">
+                {/* <div className="mt-auto">
                   <Button
                     variant="brand"
                     size="lg"
                     className="w-full"
-                    onClick={() => handleScroll("#get-started")}
+                    onClick={() => setIsOpen(false)}
                     asChild
                   >
-                    <a href="#get-started">Sign Up</a>
+                    <a href="signup">Sign Up</a>
                   </Button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </>

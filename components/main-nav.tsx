@@ -1,49 +1,35 @@
 "use client";
 
-import type React from "react";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+interface NavItem {
+  label: string;
+  href: string;
+}
 
 interface MainNavProps {
-  items: {
-    label: string;
-    href: string;
-  }[];
+  items: NavItem[];
 }
 
 export function MainNav({ items }: MainNavProps) {
-  const pathname = usePathname();
-
-  const handleScroll = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    // Only prevent default if it's a hash link on the current page
-    if (href.startsWith("#")) {
-      e.preventDefault();
-      const element = document.getElementById(href.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+  const handleNavClick = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
 
   return (
-    <nav className="hidden md:flex items-center gap-6">
+    <nav className="hidden md:flex items-center gap-8">
       {items.map((item) => (
-        <Link
+        <button
+          className="font-normal transition-colors text-[#003429B2] hover:text-brand dark:text-foreground dark:hover:text-brand"
           key={item.href}
-          href={item.href}
-          onClick={(e) => handleScroll(e, item.href)}
-          className={cn(
-            "text-sm font-medium transition-colors hover:text-primary",
-            pathname === item.href ? "text-primary" : "text-muted-foreground"
-          )}
+          onClick={() => handleNavClick(item.href)}
         >
           {item.label}
-        </Link>
+        </button>
       ))}
     </nav>
   );

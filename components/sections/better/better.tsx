@@ -42,7 +42,7 @@ const Better = () => {
     </span>
   );
   return (
-    <section className="container relative overflow-hidden px-6 mx-auto min-h-[50vh] mt-20 pb-20">
+    <section id="products" className="container relative overflow-hidden px-6 mx-auto min-h-[50vh] mt-20 pb-20">
       <h1 className="text-center text-[40px] font-bold dark:text-white text-[#043024] mb-10">
         {heading}
       </h1>

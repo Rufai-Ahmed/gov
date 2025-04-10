@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import type React from "react";
-
+import { useState, useEffect } from "react";
 import { MainNav } from "@/components/main-nav";
 import { MobileSidebar } from "@/components/mobile-sidebar";
 import { Button } from "@/components/ui/button";
@@ -12,60 +10,64 @@ import Link from "next/link";
 
 export function Header() {
   const { theme } = useTheme();
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "#home" },
+    { label: "Home", href: "home" },
     {
       label: theme === "dark" ? "Why We Better Pass" : "Why We're Better",
-      href: "#products",
+      href: "products",
     },
-    { label: "Who We serve", href: "#join" },
-    { label: "About Us", href: "#about-us" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    { label: "Who We Serve", href: "who-we-serve" },
+    { label: "About Us", href: "about-us" },
   ];
 
-  const handleScroll = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    if (href.startsWith("#")) {
-      e.preventDefault();
-      const element = document.getElementById(href.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
       }
-    }
-  };
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="w-full py-4 sticky top-0 bg-background/95 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Logo />
-        </div>
+    <header
+      className={`container mx-auto w-full py-4 px-6 flex items-center justify-between transition-all duration-300 ease-in-out sticky z-40 top-0 ${
+        hasScrolled ? "bg-white bg-opacity-80 backdrop-blur-lg" : ""
+      }`}
+    >
+      {/* Logo */}
+      <div className="flex items-center">
+        <Logo />
+      </div>
 
-        {/* Desktop Navigation */}
-        <MainNav items={navItems} />
+      {/* Desktop Navigation */}
+      <MainNav items={navItems} />
 
-        {/* Mobile Navigation */}
-        <div className="flex items-center gap-4 md:hidden">
-          <MobileSidebar navItems={navItems} />
-        </div>
+      {/* Mobile Navigation */}
+      <div className="flex items-center gap-4 md:hidden">
+        <MobileSidebar navItems={navItems} />
+      </div>
 
-        {/* Right Side Actions */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button
-            variant="brand"
-            size="lg"
-            asChild
-            className="hidden md:inline-flex"
-            onClick={(e) => handleScroll(e as any, "#get-started")}
-          >
-            <Link href="#get-started">Sign Up</Link>
-          </Button>
-        </div>
+      {/* Right Side Actions */}
+      <div className="hidden md:flex items-center gap-4">
+        <Button
+          variant="brand"
+          size="lg"
+          asChild
+          className="hidden md:inline-flex"
+        >
+          <Link href="/sign-up">Sign Up</Link>
+        </Button>
       </div>
     </header>
   );
