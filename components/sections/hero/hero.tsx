@@ -33,7 +33,7 @@ const Hero = () => {
   const buttonText = isDarkMode ? "Join The Waitlist" : "Join The Waitlist";
 
   return (
-    <section className="container relative mx-auto px-6 flex flex-col items-center min-h-[70vh] justify-center">
+    <section id="home" className="container relative mx-auto px-6 flex flex-col items-center min-h-[70vh] justify-center">
       {/* Animated Shapes */}
       <AnimatedShapes position="top-left" className="md:block hidden" />
       <AnimatedShapes position="bottom-right" className="md:block hidden" />

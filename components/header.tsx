@@ -11,15 +11,15 @@ export function Header() {
   const { theme } = useTheme();
 
   const navItems = [
-    { label: "Home", href: "/" },
+    { label: "Home", href: "home" },
     {
       label: theme === "dark" ? "Why We Better Pass" : "Why We're Better",
-      href: "/products",
+      href: "products",
     },
-    { label: "Who We serve", href: "/who-we-serve" },
-    { label: "About Us", href: "/about-us" },
+    { label: "Who We Serve", href: "who-we-serve" },
+    { label: "About Us", href: "about-us" },
   ];
-
+  
   return (
     <header className="container mx-auto w-full py-4 px-6 flex items-center justify-between">
       {/* Logo */}

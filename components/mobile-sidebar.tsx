@@ -37,6 +37,17 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
     };
   }, [isOpen]);
 
+  const handleNavClick = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
       <button
@@ -81,10 +92,9 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                   {navItems.map((item) => (
                     <NavLink
                       key={item.href}
-                      href={item.href}
                       active={pathname === item.href}
                       className="text-xl"
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => handleNavClick(item.href)}
                     >
                       {item.label}
                     </NavLink>
