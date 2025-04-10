@@ -79,7 +79,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-0 left-0 h-screen w-3/4 max-w-xs bg-white dark:bg-gray-900 z-60 md:hidden shadow-xl"
+              className="fixed top-0 left-0 h-screen w-3/4 max-w-xs bg-white dark:bg-[#00261e] z-60 md:hidden shadow-xl"
             >
               <div className="flex flex-col p-6 h-full">
                 <div className="flex items-center justify-between mb-8">
