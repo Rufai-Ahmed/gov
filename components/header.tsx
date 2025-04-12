@@ -68,7 +68,7 @@ export function Header() {
           asChild
           className="hidden md:inline-flex"
         >
-          <Link href="/sign-up">Register</Link>
+          <Link href="/sign-up">Sign up</Link>
         </Button>
       </div>
     </header>
