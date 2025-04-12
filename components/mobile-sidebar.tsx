@@ -99,7 +99,7 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                   ))}
                 </nav>
 
-                <div className="mt-auto">
+                <div className="mt-[300px]">
                   <Button
                     variant="brand"
                     size="lg"
