@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./ui/logo";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface NavItem {
   label: string;
@@ -100,14 +101,16 @@ export function MobileSidebar({ navItems }: MobileSidebarProps) {
                 </nav>
 
                 <div className="mt-[300px]">
-                  <Button
-                    variant="brand"
-                    size="lg"
-                    className="w-full"
-                    onClick={() => handleNavClick("get-started")}
-                  >
-                    Sign up
-                  </Button>
+                  <Link href="/waitlist">
+                    <Button
+                      variant="brand"
+                      size="lg"
+                      className="w-full"
+                      // onClick={() => handleNavClick("/waitlist")}
+                    >
+                      Sign up
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
