@@ -37,7 +37,7 @@ const Page = () => {
         <GetInTouch />
       </div>
       <Footer />
-      <ChatWithUs />
+      {/* <ChatWithUs /> */}
     </div>
   );
 };
