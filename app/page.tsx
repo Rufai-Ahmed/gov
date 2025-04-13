@@ -1,5 +1,5 @@
 import FAQSection from "@/components/faq/faq-section";
-import ChatWithUs from "@/components/icons/chat-with-us";
+// import ChatWithUs from "@/components/icons/chat-with-us";
 import AboutWepay from "@/components/sections/about/AboutWepay";
 import Better from "@/components/sections/better/better";
 import Footer from "@/components/sections/footer/Footer";
